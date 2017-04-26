@@ -1,0 +1,62 @@
+/*title bar styling*/
+
+#title-container{
+	background: green;
+	height: 250px;
+}
+
+#title{
+	color: white;
+}
+
+/*results section styling*/
+
+#all-results-container{
+	background: blue;
+	height: 700px;
+}
+
+#all-results-title{
+	background: white;
+	height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#js-all-results{
+	background: white;
+	height: 600px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*Selected result Styling*/
+#selected-result-container{
+	background: red;
+	height: 700px;
+}
+
+#selected-result-title{
+	background: white;
+	height: 20px;
+	margin-top: 20px;
+}
+
+#js-selected-result{
+	background: white;
+	height: 350px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#similar-result-title{
+	background: grey;
+	height: 20px;
+}
+
+#js-similar-result{
+	background: grey;
+	height: 200px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
