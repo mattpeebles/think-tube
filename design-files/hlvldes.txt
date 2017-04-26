@@ -1,0 +1,26 @@
+High Level Design for Thinkful Youtube API Project
+
+
+Requirements
+Simple Search Form that allows user to search Youtube videos - through input
+Use Youtube API to access JSON based on search term
+Display thumbnail based upon return videos
+
+
+Bonus Requirements
+make images clickable - leading them to the video on youtube
+make images clickable - playing in a lightbox
+show link for more videos from the channel it came from
+show buttons to get more results - using previous and next page links from JSON
+
+
+Design
+
+static headerbar with text input area that allows user to input form - 100% width
+
+4 span column that displays search results left adjusted
+
+8 span column that redisplays the video thumbnail
+	-future will hold lightbox for video to play
+
+8 span column beneath lightbox that shows additional videos from channel
