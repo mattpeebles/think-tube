@@ -12,6 +12,10 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+	<!-- lity lightbox css -->
+	<link href="lity/dist/lity.css" rel="stylesheet">
+
+	<!-- my css -->
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
@@ -22,54 +26,32 @@
 			<div id="title">
 				<h1>Youtube Search App</h1>
 			</div>
-			<form id="search-form">
-				<input type="text" name="video-search" placeholder="HUMBLE." required>
-				<input type="submit" value="Search">
+			<form id="js-search-form">
+				<input type="text" name="video-search" id = "js-search" placeholder="HUMBLE." required>
+				<input type="submit" value="Search" id="js-submit">
 			</form>
 		</div>
 	</section>
 	<!-- results display section -->
-	<section class="row" id="results-row">
-
-		<!-- JSON display section -->
-		<div class="col-xs-12 col-sm-6 col-md-4" id="all-results-container">
-			<div class="col-xs-12 col-sm-12 col-md-12">
-				<div id="all-results-title">
-					<p>Results</p>
-				</div>
-				<div id="js-all-results">
-					<p>RESULTS GO HERE</p>
-				</div>
+	<section id="results-section">
+			<div class="row" id="js-all-results">
+				<!-- JSON RESULTS GO HERE -->
 			</div>
 		</div>
-
-		<!-- selected result from JSON display section -->
-		<div class="col-xs-12 col-sm-6 col-md-8" id="selected-result-container">
-			<div class="col-xs-12 col-sm-12 col-md-12">	
-				<div id="selected-result-title">
-					Selected Video from Result
-				</div>
-				<div id="js-selected-result">
-					<p>SELECTED RESULT GOES HERE</p>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12">	
-				<div id="similar-result-title">
-					<p>More Videos from this Channel</p>
-				</div>
-				<div id="js-similar-result">
-					<p>SIMILAR RESULTS GO HERE</p>
-				</div>
-			</div>
-		</div>
-
 	</section>
 </body>
+	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous"></script>
 	
+	<!-- bootstrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!-- lity lightbox jquery -->
+	<script src="lity/vendor/jquery.js"></script>
+	<script src="lity/dist/lity.js"></script>
+
+	<!-- my js -->
 	<script src="app.js"></script>
 </html>
