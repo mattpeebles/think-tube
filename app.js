@@ -38,4 +38,5 @@ function watchSearch(){
 
 $(function(){
 	watchSearch();
+	$( "#js-search" ).focus();
 });

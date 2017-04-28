@@ -1,62 +1,59 @@
 /*title bar styling*/
 
 #title-container{
-	background: green;
-	height: 250px;
+	background-image: 
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url(background.jpeg);
+	height: 40vh;
+}
+
+#title-div{
+	position: relative;
+	height: 40vh;
 }
 
 #title{
 	color: white;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#js-search{
+	position: absolute;
+	top: 30%;
+	left: 35%;
+	width: 250px;
+	height: 45px;
+	background-color: transparent;
+	color: white;
+}
+
+#js-submit{
+	position: absolute;
+	color: white;
+  	background: transparent;
+  	border: solid 2px white;
+  	text-shadow: none;
+  	left: 35%;
+  	top: 50%;
+  	width: 250px;
+}
+
+#js-submit:hover{
+	color: red;
+	border: solid 2px red;
+}
+
+#js-submit:active{
+	color: blue;
+	border: solid 2px blue;
 }
 
 /*results section styling*/
 
-#all-results-container{
-	background: blue;
-	height: 700px;
-}
-
-#all-results-title{
-	background: white;
-	height: 20px;
+#results-section{
 	margin-top: 10px;
-	margin-bottom: 10px;
+	height: 100vh;
 }
 
-#js-all-results{
-	background: white;
-	height: 600px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-/*Selected result Styling*/
-#selected-result-container{
-	background: red;
-	height: 700px;
-}
-
-#selected-result-title{
-	background: white;
-	height: 20px;
-	margin-top: 20px;
-}
-
-#js-selected-result{
-	background: white;
-	height: 350px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#similar-result-title{
-	background: grey;
-	height: 20px;
-}
-
-#js-similar-result{
-	background: grey;
-	height: 200px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
