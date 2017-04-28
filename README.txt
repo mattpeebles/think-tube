@@ -7,9 +7,10 @@ https://mattpeebles.github.io/think-tube/
 Complete
 -high level design
 -wireframe
-
-To Do
 -low level design
 -low level design implementation
+
+To Do
+-next previous buttons
 -UX
 -UI
