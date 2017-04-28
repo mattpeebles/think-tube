@@ -9,8 +9,9 @@ Complete
 -wireframe
 -low level design
 -low level design implementation
+-next-previous buttons
 
 To Do
--next previous buttons
+-simliar channels div
 -UX
 -UI

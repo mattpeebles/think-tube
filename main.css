@@ -19,6 +19,7 @@
 	right: 0;
 }
 
+/*search bar styling*/
 #js-search{
 	position: absolute;
 	top: 30%;
@@ -40,6 +41,8 @@
   	width: 250px;
 }
 
+/*submit button styling*/
+
 #js-submit:hover{
 	color: red;
 	border: solid 2px red;
@@ -55,5 +58,15 @@
 #results-section{
 	margin-top: 10px;
 	height: 100vh;
+	margin-left: 10px;
+	text-align: center;
 }
 
+.result-container{
+	margin: 15px;
+}
+/*nav button styling*/
+
+.hidden{
+	display: none;
+}
