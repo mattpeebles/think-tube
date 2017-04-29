@@ -8,14 +8,14 @@ img {
 	background-image: 
 		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 		url(background.jpeg);
-	height: 40vh;
+	height: 60vh;
 	width: 100%;
 	background-size: cover;
 }
 
 #title-div{
 	position: relative;
-	height: 40vh;
+	height: 60vh;
 	width: 100%;
 }
 
@@ -106,14 +106,6 @@ a.channel-id-link{
 	color: white;
 }
 
-#js-all-results div:first-child{
-	margin-top: 50px;
-}
-
-#js-all-results div:last-child{
-	margin-bottom: 50px;
-}
-
 /*nav button styling*/
 
 .js-previous-button{
@@ -167,8 +159,23 @@ a.channel-id-link{
 	color: white;
 }
 
-@media (min-width: 641px){
+@media (min-width: 700px){
+/*title*/
 	#title > h1 {
 	font-size: 3em;
+	}
+
+/*search form*/
+	#js-search{
+		width: 400px;
+	}
+
+	#js-submit{
+		width: 250px;
+	}
+/*results*/
+	#results-container{
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 }
