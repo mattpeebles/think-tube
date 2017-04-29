@@ -78,6 +78,11 @@ img {
 
 /*results section styling*/
 
+#results-container{
+		padding-top: 50px;
+		padding-bottom: 50px;
+}
+
 #results-section{
 	position: relative;
 	min-height: 100vh;
@@ -174,8 +179,5 @@ a.channel-id-link{
 		width: 250px;
 	}
 /*results*/
-	#results-container{
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
+
 }
