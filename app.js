@@ -9,7 +9,6 @@ function goToResults(){
         'slow');
 };
 
-
 // grabs json data from api, takes arguments
 // searchTerm which is the user entered search
 //call back which displays the data
@@ -32,12 +31,16 @@ function displayYoutubeSearchData(data){
 	if (data.items){
 		data.items.forEach(function(item){
 			resultElement += //adds below code for each item in the json file
-			"<div class=\'col-sm-12 col-md-6 result\'><div class=\"result-container\">" + //sets bootstrap div and then a div inside of it
-				'<p>' + item["snippet"]["title"] + '</p>' + //places title of video above video
-				"<a href=\'https://www.youtube.com/watch?v=" + item["id"]["videoId"] + "\' data-lity>"+ //creates hyperlink to lightbox around thumbnail
-				"<img src=\'" + item["snippet"]["thumbnails"]["high"]["url"] + '\'>' + //places high-res thumbnail
-				'</a>'+
-			"</div></div>"; //closes both divs
+			"<div class=\'col-sm-12 col-md-6 result\'>" + 
+				"<div class=\"result-container\">" + //sets bootstrap div and then a div inside of it
+					'<p class=\'result-title\'>' + item["snippet"]["title"] + '</p>' + //places title of video above video
+					"<a href=\'https://www.youtube.com/watch?v=" + item["id"]["videoId"] + "\' data-lity>"+ //creates hyperlink to lightbox around thumbnail
+					"<img src=\'" + item["snippet"]["thumbnails"]["medium"]["url"] + '\'>' + //places high-res thumbnail
+					'</a>'+
+					"<div class=\'channel-id\'><a class = \'channel-id-link\'href=\'https://www.youtube.com/channel/" + item["snippet"]["channelId"] + "\'><p class=\'channel-id-title\'>Similar Videos</a></p>" +
+					"</div>" +	
+				"</div>" +
+			"</div>"; //closes both divs
 		});
 		nextPageToken = data["nextPageToken"]; //updates next page token
 		prevPageToken = data["prevPageToken"]; //updates next page token

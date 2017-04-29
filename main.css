@@ -1,44 +1,67 @@
-/*title bar styling*/
+/*for mobile phones*/
+
+img { 
+	max-width: 100%; 
+	height: auto; }
 
 #title-container{
 	background-image: 
 		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 		url(background.jpeg);
 	height: 40vh;
+	width: 100%;
+	background-size: cover;
 }
 
 #title-div{
 	position: relative;
 	height: 40vh;
+	width: 100%;
 }
 
 #title{
 	color: white;
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;
 	right: 0;
+	font-family: 'Lobster', cursive;
+}
+
+#title > h1 {
+	font-size: 24px;
 }
 
 /*search bar styling*/
 #js-search{
 	position: absolute;
-	top: 30%;
-	left: 35%;
-	width: 250px;
-	height: 45px;
+	top: 35%;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+	width: 200px;
+	height: 50px;
 	background-color: transparent;
 	color: white;
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
 }
 
 #js-submit{
 	position: absolute;
 	color: white;
-  	background: transparent;
-  	border: solid 2px white;
+  	background: #D45767;
+  	border: solid 2px #D45767;
   	text-shadow: none;
-  	left: 35%;
-  	top: 50%;
-  	width: 250px;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	top: 60%;
+  	width: 150px;
+  	height: 45px;
+  	font-size: 22px;
+  	font-family: 'Playfair Display', serif;
 }
 
 /*submit button styling*/
@@ -56,17 +79,96 @@
 /*results section styling*/
 
 #results-section{
-	margin-top: 10px;
-	height: 100vh;
-	margin-left: 10px;
+	position: relative;
+	min-height: 100vh;
+	height: 100%;
 	text-align: center;
+	font-family: 'Playfair Display', serif;
+	background-color: #57D4C4;
+	width: 100%
+	font-size: 30px;
+	background-size: cover;
+}
+
+.channel-id{
+	margin-top: 15px;
+}
+
+a.channel-id-link{
+	color: #D45767;
+	font-size: 18px;
+	text-decoration: underline;
 }
 
 .result-container{
 	margin: 15px;
+	font-size: 22px;
+	color: white;
 }
+
+#js-all-results div:first-child{
+	margin-top: 50px;
+}
+
+#js-all-results div:last-child{
+	margin-bottom: 50px;
+}
+
 /*nav button styling*/
 
-.hidden{
-	display: none;
+.js-previous-button{
+	height: 50px;
+	width: 75px;
+	border: 1px solid white;
+	position: absolute;
+	background-color: #8557D4;
+	left: 0;
+	box-shadow: none;
+	border: 0;
+}
+
+.js-previous-button:active{
+	background-color: #D457A6
+}
+
+#top-previous{
+	top: 0;
+}
+
+#bottom-previous{
+	bottom: 0;
+}
+
+.js-next-button{
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	background-color: #8557D4;
+	right: 0;
+	box-shadow: none;
+	border: 0
+}
+
+.js-next-button:active{
+	background-color: #D457A6
+}
+
+
+#top-next{
+	top: 0;
+}
+
+#bottom-next{
+	bottom: 0;
+}
+
+.glyphicon{
+	font-size: 22px;
+	color: white;
+}
+
+@media (min-width: 641px){
+	#title > h1 {
+	font-size: 3em;
+	}
 }
