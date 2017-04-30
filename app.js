@@ -3,6 +3,7 @@ var nextPageToken = null;
 var prevPageToken = null;
 var prevPageCount = 0;
 
+
 //scrolls body to result sections
 function goToResults(){
 	$('html,body').animate({
