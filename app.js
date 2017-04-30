@@ -1,6 +1,7 @@
 var YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search";
 var nextPageToken = null;
 var prevPageToken = null;
+var prevPageCount = 0;
 
 //scrolls body to result sections
 function goToResults(){
@@ -8,6 +9,21 @@ function goToResults(){
         scrollTop: $("#results-section").offset().top},
         'slow');
 };
+
+function buttonControl(){
+	if (nextPageToken === null){
+		$(".js-next-button").addClass("disabled").prop("disabled", true)
+	}
+	else {
+		$(".js-next-button").removeClass("disabled").prop("disabled", false)
+	}
+	if (prevPageToken === null || prevPageCount == 0){
+		$(".js-previous-button").addClass("disabled").prop("disabled", true)
+	}
+	else {
+		$(".js-previous-button").removeClass("disabled").prop("disabled", false)
+	}
+}
 
 // grabs json data from api, takes arguments
 // searchTerm which is the user entered search
@@ -31,19 +47,21 @@ function displayYoutubeSearchData(data){
 	if (data.items){
 		data.items.forEach(function(item){
 			resultElement += //adds below code for each item in the json file
-			"<div class=\'col-sm-12 col-md-6 result\'>" + 
-				"<div class=\"result-container\">" + //sets bootstrap div and then a div inside of it
+			"<div class=\'col-sm-12 col-lg-6 result\'>" + 
+				"<div class=\"item-container\">" + //sets bootstrap div and then a div inside of it
 					'<p class=\'result-title\'>' + item["snippet"]["title"] + '</p>' + //places title of video above video
 					"<a href=\'https://www.youtube.com/watch?v=" + item["id"]["videoId"] + "\' data-lity>"+ //creates hyperlink to lightbox around thumbnail
-					"<img src=\'" + item["snippet"]["thumbnails"]["medium"]["url"] + '\'>' + //places high-res thumbnail
+					"<img src=\'" + item["snippet"]["thumbnails"]["high"]["url"] + '\'>' + //places high-res thumbnail
 					'</a>'+
-					"<div class=\'channel-id\'><a class = \'channel-id-link\'href=\'https://www.youtube.com/channel/" + item["snippet"]["channelId"] + "\'><p class=\'channel-id-title\'>Similar Videos</a></p>" +
+					"<div><a class = \'btn btn-default channel-id\'href=\'https://www.youtube.com/channel/" + item["snippet"]["channelId"] + "\'><p class=\'channel-id-title\'>Similar Videos</p></a>" +
 					"</div>" +	
 				"</div>" +
 			"</div>"; //closes both divs
 		});
 		nextPageToken = data["nextPageToken"]; //updates next page token
 		prevPageToken = data["prevPageToken"]; //updates next page token
+		console.log(nextPageToken)
+		buttonControl();
 	}
 	else {
 		resultElement += '<p>No results</p>'; //displays no results if user doesn't input a valid search
@@ -65,13 +83,16 @@ function navButton(){ //creates functions for nav buttons
 		var query = $("#js-search-form").find("#js-search").val(); //sets query for getdata function
 		getDataFromAPI(query, displayYoutubeSearchData, nextPageToken); //calls getdata function taking user input as query, display function as callback, and nextPageToken as token
 		goToResults();
+		prevPageCount++;
 	});
 
 	$(".js-previous-button").click(function(event){ //watches for previous button and loads previous page of data
 		var query = $("#js-search-form").find("#js-search").val(); //sets query for getdata function
 		getDataFromAPI(query, displayYoutubeSearchData, prevPageToken); //calls getdata function taking user input as query, display function as callback, and prevPageToken as token
 		goToResults();
+		prevPageCount--;
 	});
+	buttonControl();
 }
 
 $(function(){ //ready function
