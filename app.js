@@ -39,6 +39,7 @@ function getDataFromAPI(searchTerm, callback, t){
 		q: searchTerm,
 		maxResults: 6,
 		type: "video",
+		relevanceLanguage: "en"
 	}
 	$.getJSON(YOUTUBE_BASE_URL, query, callback);
 }

@@ -228,22 +228,23 @@ img {
 
 	/*targets title text specifically*/
 	#title > h1 {
-	font-size: 6em;
+	font-size: 3em;
 	}
 
 /*search form*/
 
 		/*targets text area input for form*/
 	#js-search{
-		width: 600px;
-		height: 100px;
+		width: 400px;
+		height: 75px;
 		font-size: 24px;
 	}
 
 		/*targets form submit button*/
 	#js-submit{
-		width: 400px;
-		height: 75px;
+		width: 250px;
+		height: 50px;
+		margin-top: 10px;
 	}
 /*results*/
 
@@ -253,14 +254,33 @@ img {
 		height: 200px;
 	}
 
-		/*targets name of thumbnail*/
-	.result-title {
-	font-size: 30px;
+		/*the div that holds all of the html for the item instance*/
+	.item-container{
+		position: relative;
+		font-size: 22px;
+		color: white;
+		margin-top: 20px;
+		height: auto;
 	}
 
-		/*targets hyperlink within pseudobutton*/
-	a.channel-id-link{
-		font-size: 30px;
+		/*targets name of thumbnail*/
+	.result-title {
+	font-size: 18px;
+	}
+
+		/*targets pseudobutton that links to similar videos*/
+	.channel-id{
+		position: absolute;
+		bottom: -60px;
+		width: 150px;
+	  	height: 40px;
+	}
+
+		/*targets psuedobutton text*/
+	.channel-id-title{
+		font-family: 'Playfair Display', serif;
+		font-size: 16px;
+		color: white;
 	}
 /*nav buttons*/
 
@@ -271,8 +291,8 @@ img {
 
 		/*targets left side buttons*/
 	.js-previous-button{
-		height: 100px;
-		width: 120px;
+		height: 50px;
+		width: 75px;
 	}
 		/*targets right side buttons that are not disabled*/
 	.js-next-button:not(.disabled):hover{
@@ -281,7 +301,12 @@ img {
 
 		/*targets right side buttons*/
 	.js-next-button{
-		height: 100px;
-		width: 120px;
+		height: 50px;
+		width: 75px;
 	}
+
+	.glyphicon{
+	font-size: 18px;
+	color: white;
+}
 }
