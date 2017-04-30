@@ -10,18 +10,20 @@ function goToResults(){
         'slow');
 };
 
+
+//enables and disables navigation buttons
 function buttonControl(){
 	if (nextPageToken === null){
-		$(".js-next-button").addClass("disabled").prop("disabled", true)
+		$(".js-next-button").addClass("hidden")
 	}
 	else {
-		$(".js-next-button").removeClass("disabled").prop("disabled", false)
+		$(".js-next-button").removeClass("hidden")
 	}
 	if (prevPageToken === null || prevPageCount == 0){
-		$(".js-previous-button").addClass("disabled").prop("disabled", true)
+		$(".js-previous-button").addClass("hidden")
 	}
 	else {
-		$(".js-previous-button").removeClass("disabled").prop("disabled", false)
+		$(".js-previous-button").removeClass("hidden")
 	}
 }
 

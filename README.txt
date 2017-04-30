@@ -10,11 +10,11 @@ Complete
 -low level design
 -low level design implementation
 -next-previous buttons
-
-To Do
--simliar channels div
+-similar channels div
 -UX
 -UI
+
+To Do
 
 
 Youtube API Search Documenation for reference

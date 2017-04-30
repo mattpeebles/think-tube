@@ -90,7 +90,7 @@ img {
 	/*targets entire container - holds results and nav buttons*/
 #results-section{
 	position: relative;
-	min-height: 100vh;
+	min-height: 40vh;
 	height: 100%;
 	text-align: center;
 	font-family: 'Playfair Display', serif;
@@ -161,6 +161,10 @@ img {
 }
 
 /*nav button styling*/
+
+.hidden{
+	display: none;
+}
 
 	/*targets left side buttons*/
 .js-previous-button{
