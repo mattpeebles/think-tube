@@ -102,16 +102,23 @@ img {
 	padding-right: 10px;
 }
 
-	/*targets the div that holds only the results,
-	child of #results-section*/
+	/*targets the div that holds all of the results,
+	child of #result-section*/
 #results-container{
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
 
+
+	/*targets the div that enables bootstrapping for each result,
+	child of #results-container*/
+#js-all-results{
+	width: 100%;
+}
+
 	/*the div holding one instance of the result
 	and allows bootstrap styling,
-	child of #results-container*/
+	child of #js-all-results*/
 .result{
 	position: relative;
 	margin-bottom: 150px;
@@ -246,6 +253,7 @@ img {
 		height: 50px;
 		margin-top: 10px;
 	}
+
 /*results*/
 
 		/*targets the div that holds only the results, 
@@ -282,6 +290,7 @@ img {
 		font-size: 16px;
 		color: white;
 	}
+
 /*nav buttons*/
 
 		/*targets left side buttons that are not disabled*/
@@ -294,6 +303,7 @@ img {
 		height: 50px;
 		width: 75px;
 	}
+
 		/*targets right side buttons that are not disabled*/
 	.js-next-button:not(.disabled):hover{
 		background-color: #D45768
@@ -305,8 +315,9 @@ img {
 		width: 75px;
 	}
 
+		/*targets glyphs inside the buttons*/
 	.glyphicon{
-	font-size: 18px;
-	color: white;
-}
+		font-size: 18px;
+		color: white;
+	}
 }
