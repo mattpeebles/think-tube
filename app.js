@@ -62,7 +62,6 @@ function displayYoutubeSearchData(data){
 		});
 		nextPageToken = data["nextPageToken"]; //updates next page token
 		prevPageToken = data["prevPageToken"]; //updates next page token
-		console.log(nextPageToken)
 		buttonControl();
 	}
 	else {
