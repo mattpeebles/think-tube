@@ -116,19 +116,26 @@ img {
 	width: 100%;
 }
 
+
+	/*targets rows and keeps them within the #js-all-results section
+	prevents rows from extending past the width of the viewport*/
+#js-all-results > .row {
+	width: 100%;
+}
+
 	/*the div holding one instance of the result
 	and allows bootstrap styling,
 	child of #js-all-results*/
 .result{
 	position: relative;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 }
 
 	/*the div that holds all of the html for the item instance*/
 .item-container{
 	position: relative;
 	font-size: 22px;
-	color: white;
+	color: #666b75;
 	margin-top: 50px;
 	height: auto;
 }
@@ -177,7 +184,7 @@ img {
 .js-previous-button{
 	height: 50px;
 	width: 75px;
-	border: 1px solid white;
+	margin: 0;
 	position: absolute;
 	background-color: #8557D4;
 	left: 0;
@@ -191,7 +198,7 @@ img {
 
 	/*targets top left button*/
 #top-previous{
-	top: 0;
+	top: 0.5;
 }
 
 	/*targets bottom left button*/
@@ -203,6 +210,7 @@ img {
 .js-next-button{
 	height: 50px;
 	width: 75px;
+	margin: 0;
 	position: absolute;
 	background-color: #8557D4;
 	right: 0;
@@ -216,7 +224,7 @@ img {
 
 	/*targets top right button*/
 #top-next{
-	top: 0;
+	top: 0.5;
 }
 
 	/*targets bottom right button*/
@@ -266,7 +274,6 @@ img {
 	.item-container{
 		position: relative;
 		font-size: 22px;
-		color: white;
 		margin-top: 20px;
 		height: auto;
 	}

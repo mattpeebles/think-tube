@@ -47,7 +47,9 @@ function getDataFromAPI(searchTerm, callback, t){
 
 //function edits the DOM to display the data
 function displayYoutubeSearchData(data){
-	var resultElement= "";
+	var resultElement= "<div class=\"row\">";
+	var counter = 0; //allows control for how many results go into each row
+	$("#js-all-results").empty();
 	if (data.items){
 		data.items.forEach(function(item){
 			resultElement += //adds below code for each item in the json file
@@ -60,7 +62,14 @@ function displayYoutubeSearchData(data){
 					"<div><a class = \'btn btn-default channel-id\'href=\'https://www.youtube.com/channel/" + item["snippet"]["channelId"] + "\'><p class=\'channel-id-title\'>Similar Videos</p></a>" +
 					"</div>" +	
 				"</div>" +
-			"</div>"; //closes both divs
+			"</div>";
+			counter++;
+			if (counter == 2){ //if counter reaches two then row is done so it resets everything
+				resultElement += "</div>";
+				$("#js-all-results").append(resultElement);
+				resultElement = "<div class=\"row\">";
+				counter = 0;
+			}
 		});
 		nextPageToken = data["nextPageToken"]; //updates next page token
 		prevPageToken = data["prevPageToken"]; //updates next page token
@@ -69,7 +78,6 @@ function displayYoutubeSearchData(data){
 	else {
 		resultElement += '<p>No results</p>'; //displays no results if user doesn't input a valid search
 	}
-	$("#js-all-results").html(resultElement); //updates DOM with result Element
 }
 
 function watchSearch(){
