@@ -55,7 +55,7 @@ function displayYoutubeSearchData(data){
 			resultElement += //adds below code for each item in the json file
 			"<div class=\'col-sm-12 col-lg-6 result\'>" + 
 				"<div class=\"item-container\">" + //sets bootstrap div and then a div inside of it
-					'<p class=\'result-title\'>' + item["snippet"]["title"] + '</p>' + //places title of video above video
+					'<div class=\'result-title\'><span>' + item["snippet"]["title"] + '<span></div>' + //places title of video above video
 					"<a href=\'https://www.youtube.com/watch?v=" + item["id"]["videoId"] + "\' data-lity>"+ //creates hyperlink to lightbox around thumbnail
 					"<img src=\'" + item["snippet"]["thumbnails"]["high"]["url"] + '\'>' + //places high-res thumbnail
 					'</a>'+

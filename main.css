@@ -8,7 +8,7 @@ img {
 	/*targets background image container*/
 #title-container{ 
 	background-image: 
-		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		linear-gradient(rgba(249, 255, 226, 0.6), rgba(249, 255, 226, 0.6)),
 		url(background.jpeg);
 	height: 60vh;
 	width: 100%;
@@ -41,17 +41,22 @@ img {
 	/*targets text area input for form*/
 #js-search{
 	position: absolute;
-	top: 35%;
+	border: none;
+	top: 15%;
 	left: 0; 
   	right: 0; 
   	margin-left: auto; 
   	margin-right: auto; 
 	width: 250px;
 	height: 75px;
-	background-color: transparent;
-	color: white;
+	background-color: #D2DBD5;
+	color: #666b75;
 	font-family: 'Playfair Display', serif;
 	font-size: 22px;
+}
+
+#js-search:focus{
+	border: 1px solid #FF3D70;
 }
 
 /*submit button styling*/
@@ -60,8 +65,8 @@ img {
 #js-submit{
 	position: absolute;
 	color: white;
-  	background: #D45767;
-  	border: solid 2px #D45767;
+  	background: #FF3D70;
+  	border: solid 2px #FF3D70;
   	text-shadow: none;
   	box-shadow: none;
 	left: 0; 
@@ -76,13 +81,13 @@ img {
 }
 
 #js-submit:hover{
-	background-color: #D48557;
-	border: solid 2px #D48557;
+	background-color: #A32748;
+	border: solid 2px #A32748;
 }
 
 #js-submit:active{
-	background-color: #D4C457;
-	border: solid 2px #D4C457;
+	background-color: #FF95B1;
+	border: solid 2px #FF95B1;
 }
 
 /*results section styling*/
@@ -94,7 +99,7 @@ img {
 	height: 100%;
 	text-align: center;
 	font-family: 'Playfair Display', serif;
-	background-color: #57D4C4;
+	background-color: #D2DBD5;
 	width: cover;
 	font-size: 30px;
 	background-size: cover;
@@ -105,8 +110,8 @@ img {
 	/*targets the div that holds all of the results,
 	child of #result-section*/
 #results-container{
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 35px;
+	padding-bottom: 45px;
 }
 
 
@@ -116,19 +121,22 @@ img {
 	width: 100%;
 }
 
-
 	/*targets rows and keeps them within the #js-all-results section
 	prevents rows from extending past the width of the viewport*/
 #js-all-results > .row {
 	width: 100%;
 }
 
+/*#js-all-results:last-child{
+	margin-bottom: 10%;
+}*/
+
 	/*the div holding one instance of the result
 	and allows bootstrap styling,
 	child of #js-all-results*/
 .result{
 	position: relative;
-	margin-bottom: 100px;
+	margin-bottom: 7%;
 }
 
 	/*the div that holds all of the html for the item instance*/
@@ -136,35 +144,47 @@ img {
 	position: relative;
 	font-size: 22px;
 	color: #666b75;
-	margin-top: 50px;
+	padding-top: 50px;
 	height: auto;
+	padding-bottom: 50px;
+}
+
+/*targets the video title div*/
+.result-title {
+	height: 62px;
+	overflow: auto;
+}
+
+.result-title > span {
+	display: inline-block;
+	width: 80%;
 }
 
 	/*targets pseudobutton that links to similar videos*/
 .channel-id{
 	position: absolute;
-	bottom: -100px;
 	right: 0;
 	left: 0;
 	margin-left: auto; 
-  	margin-right: auto; 
+  	margin-right: auto;
+  	margin-top: 1%; 
 	width: 250px;
 	color: white;
-  	background: #D45767;
-  	border: solid 2px #D45767;
+  	background: #FF3D70;
+  	border: solid 2px #FF3D70;
   	text-shadow: none;
   	box-shadow: none;
   	height: 60px;
 }
 
 .channel-id:hover{
-	background-color: #D48557;
-	border: solid 2px #D48557;
+	background-color: #A32748;
+	border: solid 2px #A32748;
 }
 
 .channel-id:focus{
-	background-color: #D4C457;
-	border: solid 2px #D4C457;
+	background-color: #FF95B1;
+	border: solid 2px #FF95B1;
 }
 
 	/*targets psuedobutton text*/
@@ -186,23 +206,26 @@ img {
 	width: 75px;
 	margin: 0;
 	position: absolute;
-	background-color: #8557D4;
+	background-color: #3B82A0;
 	left: 0;
 	box-shadow: none;
 	border: 0;
 }
 
 .js-previous-button:active{
-	background-color: #D457A6 D45768
+	background-color: #265366;
 }
 
 	/*targets top left button*/
 #top-previous{
-	top: 0.5;
+	margin-top: 1%;
+	margin-left: 1%;
 }
 
 	/*targets bottom left button*/
 #bottom-previous{
+	margin-bottom: 1%;
+	margin-left: 1%;
 	bottom: 0;
 }
 
@@ -212,23 +235,26 @@ img {
 	width: 75px;
 	margin: 0;
 	position: absolute;
-	background-color: #8557D4;
+	background-color: #3B82A0;
 	right: 0;
 	box-shadow: none;
 	border: 0
 }
 
 .js-next-button:active{
-	background-color: #D457A6
+	background-color: #265366;
 }
 
 	/*targets top right button*/
 #top-next{
-	top: 0.5;
+	margin-top: 1%;
+	margin-right: 1%;
 }
 
 	/*targets bottom right button*/
 #bottom-next{
+	margin-bottom: 1%;
+	margin-right: 1%;
 	bottom: 0;
 }
 
@@ -253,6 +279,7 @@ img {
 		width: 400px;
 		height: 75px;
 		font-size: 24px;
+		top: 35%;
 	}
 
 		/*targets form submit button*/
@@ -286,7 +313,6 @@ img {
 		/*targets pseudobutton that links to similar videos*/
 	.channel-id{
 		position: absolute;
-		bottom: -60px;
 		width: 150px;
 	  	height: 40px;
 	}
@@ -302,7 +328,7 @@ img {
 
 		/*targets left side buttons that are not disabled*/
 	.js-previous-button:not(.disabled):hover{
-		background-color: #D45768
+		background-color: #265366
 	}
 
 		/*targets left side buttons*/
@@ -313,7 +339,7 @@ img {
 
 		/*targets right side buttons that are not disabled*/
 	.js-next-button:not(.disabled):hover{
-		background-color: #D45768
+		background-color: #265366
 	}
 
 		/*targets right side buttons*/
